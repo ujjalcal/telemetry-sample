@@ -1,3 +1,5 @@
+const AWS = require('aws-sdk');
+const { AwsSdkInstrumentation } = require('@opentelemetry/instrumentation-aws-sdk');
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 const { AwsLambdaInstrumentation } = require('@opentelemetry/instrumentation-aws-lambda');
 const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http');
@@ -9,9 +11,6 @@ registerInstrumentations({
   ],
 });
 
-
-const AWS = require('aws-sdk');
-const { AwsSdkInstrumentation } = require('@opentelemetry/instrumentation-aws-sdk');
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 new AwsSdkInstrumentation().enableModule(AWS, [ 'DynamoDB' ]);
