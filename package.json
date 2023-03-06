@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@opentelemetry/instrumentation": "^0.35.1",
+    "@opentelemetry/instrumentation-aws-lambda": "^0.35.0",
+    "@opentelemetry/plugin-http": "^0.18.2"
+  }
+}
