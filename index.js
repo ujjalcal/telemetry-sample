@@ -13,9 +13,14 @@ registerInstrumentations({
   ],
 });
 
+// Add this before using the AWS SDK
+new AwsSdkInstrumentation().enable();
 
+// Then use the AWS SDK as usual
+//const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-new AwsSdkInstrumentation().enableModule(AWS, [ 'DynamoDB' ]);
+
+//new AwsSdkInstrumentation().enableModule(AWS, [ 'DynamoDB' ]);
 
 
 const { context } = require('@opentelemetry/api');
