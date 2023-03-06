@@ -1,4 +1,3 @@
-const AWS = require('aws-sdk');
 
 const { AwsSdkInstrumentation } = require('@opentelemetry/instrumentation-aws-sdk');
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
@@ -17,9 +16,8 @@ registerInstrumentations({
 new AwsSdkInstrumentation().enable();
 
 // Then use the AWS SDK as usual
-//const AWS = require('aws-sdk');
+const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-
 //new AwsSdkInstrumentation().enableModule(AWS, [ 'DynamoDB' ]);
 
 
