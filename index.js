@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk');
+
 const { AwsSdkInstrumentation } = require('@opentelemetry/instrumentation-aws-sdk');
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 const { AwsLambdaInstrumentation } = require('@opentelemetry/instrumentation-aws-lambda');
@@ -8,6 +9,7 @@ registerInstrumentations({
   instrumentations: [
     new AwsLambdaInstrumentation(),
     new HttpInstrumentation(),
+    new AwsSdkInstrumentation(),
   ],
 });
 
