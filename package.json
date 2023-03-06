@@ -1,0 +1,23 @@
+{
+  "name": "telemetry",
+  "version": "1.0.0",
+  "description": "this is an example of how to use xray / otel in lambda function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ujjalcal/telemetry-sample.git"
+  },
+  "author": "Ujjal Bhattacharjee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ujjalcal/telemetry-sample/issues"
+  },
+  "homepage": "https://github.com/ujjalcal/telemetry-sample#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1328.0",
+    "aws-xray-sdk-core": "^3.4.1"
+  }
+}
